@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="5120"
+    android:viewportHeight="5120">
+    <group
+        android:scaleX="0.47666666"
+        android:scaleY="0.47666666"
+        android:translateX="1339.7333"
+        android:translateY="1339.7333">
+        <path
+            android:fillColor="@color/seed"
+            android:fillType="evenOdd"
+            android:pathData="M2827.5,425.5h-1449c-76.3,-0 -153.6,-2.5 -212,15 -125.4,37.5 -205.9,113.1 -266,216 -51.1,87.6 -47,208.3 -47,348v3148c-0,77.8 -5.1,163.2 13,224 40.4,136 124.4,232.5 248,285 99.6,42.3 259.6,32 402,32h2242c62,0 126.1,2.5 176,-10 107.9,-27.1 191.8,-84.1 249,-162 37.7,-51.4 63.5,-110.8 79,-185 7.3,-34.8 5,-77.1 5,-118v-2241c0,-75.8 2.3,-152.1 -15,-210 -34.3,-114.6 -102.3,-178.3 -176,-252l-195,-195q-277,-277 -554,-554 -79.5,-79.5 -159,-159c-46.7,-46.7 -89.8,-93.3 -149,-128 -34.8,-20.4 -76.2,-34.1 -120,-45Z" />
+        <path
+            android:fillColor="@color/md_theme_light_onPrimary"
+            android:fillType="evenOdd"
+            android:pathData="M1399,3886H3721v210H1399V3886Z" />
+        <path
+            android:fillColor="@color/md_theme_light_onPrimary"
+            android:fillType="evenOdd"
+            android:pathData="M1399,3018H3721v210H1399V3018Z" />
+        <path
+            android:fillColor="@color/md_theme_light_onPrimary"
+            android:fillType="evenOdd"
+            android:pathData="M1399,2150H3721v210H1399V2150Z" />
+        <path
+            android:fillColor="@color/md_theme_light_onPrimary"
+            android:fillType="evenOdd"
+            android:pathData="M1490.5,1013.1h407.5c56.5,0 140.3,-7.3 183,5.6 45.2,13.6 117,100.2 148.5,131.1q38,37.2 76,74.3c10.3,10.1 25.5,23.8 15,41.6l-166.9,163.1c-22.3,21.8 -39.8,47.9 -78.3,58.4 -28.5,7.8 -78.7,4 -116.3,4H1550.3c-26.4,0 -58.1,2.1 -79.4,-2.4 -25.3,-5.3 -46.2,-17.6 -58.7,-32 -19.1,-21.9 -11.5,-69.1 -11.5,-103.1V1149c0,-30.4 -6.8,-72.5 6.9,-95.1C1424.5,1025.8 1449.7,1024.4 1490.5,1013.1Z" />
+    </group>
+</vector>

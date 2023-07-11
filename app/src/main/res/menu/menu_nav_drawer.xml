@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/note"
+            android:title="All Notes" />
+
+        <item
+            android:id="@+id/archivedFragment"
+            android:icon="@drawable/archive"
+            android:title="Archived" />
+
+        <item
+            android:id="@+id/labelFragment"
+            android:icon="@drawable/label"
+            android:title="Manage Labels" />
+
+        <item
+            android:id="@+id/noteRecycleFragment"
+            android:icon="@drawable/delete"
+            android:title="Recycle Bin" />
+
+        <item
+            android:id="@+id/permissionDialog"
+            android:icon="@drawable/help"
+            android:title="About EverKeep" />
+
+    </group>
+
+</menu>

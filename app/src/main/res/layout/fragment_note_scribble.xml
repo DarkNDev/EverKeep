@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.note_scribble.NoteScribbleFragment"
+    tools:ignore="HardcodedText">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.darkndev.everkeep.features.scribble.ScribbleView
+            android:id="@+id/scribble_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:clickable="true"
+            android:id="@+id/stroke_bottom_sheet"
+            style="@style/Widget.Material3.BottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:behavior_hideable="true"
+            android:focusable="true"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+                android:id="@+id/drag_handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+                android:id="@+id/color_button_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:justifyContent="space_evenly">
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/black_color"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:toggle_backgroundColor="@color/black1_light"
+                    app:toggle_btnCornerRadius="50dp"
+                    app:toggle_iconColor="@android:color/white"
+                    app:toggle_iconPadding="30dp"
+                    app:toggle_selectedBackgroundColor="@color/black1"
+                    app:toggle_selectedIcon="@drawable/done" />
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/red_color"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:toggle_backgroundColor="@color/red_light"
+                    app:toggle_btnCornerRadius="50dp"
+                    app:toggle_iconColor="@android:color/white"
+                    app:toggle_iconPadding="30dp"
+                    app:toggle_selectedBackgroundColor="@color/red"
+                    app:toggle_selectedIcon="@drawable/done" />
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/blue_color"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:toggle_backgroundColor="@color/blue_light"
+                    app:toggle_btnCornerRadius="50dp"
+                    app:toggle_iconColor="@android:color/white"
+                    app:toggle_iconPadding="30dp"
+                    app:toggle_selectedBackgroundColor="@color/blue"
+                    app:toggle_selectedIcon="@drawable/done" />
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/green_color"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:toggle_backgroundColor="@color/green_light"
+                    app:toggle_btnCornerRadius="50dp"
+                    app:toggle_iconColor="@android:color/white"
+                    app:toggle_iconPadding="30dp"
+                    app:toggle_selectedBackgroundColor="@color/green"
+                    app:toggle_selectedIcon="@drawable/done" />
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/orange_color"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:toggle_backgroundColor="@color/orange_light"
+                    app:toggle_btnCornerRadius="50dp"
+                    app:toggle_iconColor="@android:color/white"
+                    app:toggle_iconPadding="30dp"
+                    app:toggle_selectedBackgroundColor="@color/orange"
+                    app:toggle_selectedIcon="@drawable/done" />
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/purple_color"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:toggle_backgroundColor="@color/purple_light"
+                    app:toggle_btnCornerRadius="50dp"
+                    app:toggle_iconColor="@android:color/white"
+                    app:toggle_iconPadding="30dp"
+                    app:toggle_selectedBackgroundColor="@color/purple"
+                    app:toggle_selectedIcon="@drawable/done" />
+
+                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                    android:id="@+id/brown_color"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:toggle_backgroundColor="@color/brown_light"
+                    app:toggle_btnCornerRadius="50dp"
+                    app:toggle_iconColor="@android:color/white"
+                    app:toggle_iconPadding="30dp"
+                    app:toggle_selectedBackgroundColor="@color/brown"
+                    app:toggle_selectedIcon="@drawable/done" />
+
+            </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/stroke_width_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:stepSize="5"
+                android:value="20"
+                android:valueFrom="10"
+                android:valueTo="100" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            app:menu="@menu/menu_bottom_scribble"
+            app:menuAlignmentMode="auto"
+            app:navigationIcon="@drawable/palette" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.darkndev.everkeep.ui.home.HomeFragment"
+        android:label="EverKeep"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_noteEditFragment"
+            app:destination="@id/noteEditFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/archivedFragment"
+        android:name="com.darkndev.everkeep.ui.archived.ArchivedFragment"
+        android:label="Archived"
+        tools:layout="@layout/fragment_archived">
+        <action
+            android:id="@+id/action_archivedFragment_to_noteEditFragment"
+            app:destination="@id/noteEditFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/labelFragment"
+        android:name="com.darkndev.everkeep.ui.label.LabelFragment"
+        android:label="Manage Labels"
+        tools:layout="@layout/fragment_label" />
+    <fragment
+        android:id="@+id/noteEditFragment"
+        android:label=""
+        android:name="com.darkndev.everkeep.ui.note_edit.NoteEditFragment"
+        tools:layout="@layout/fragment_note_edit">
+        <action
+            android:id="@+id/action_noteEditFragment_to_noteScribbleFragment"
+            app:destination="@id/noteScribbleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_noteEditFragment_to_noteStatusFragment"
+            app:destination="@id/noteStatusFragment" />
+        <argument
+            android:name="NOTE"
+            app:argType="com.darkndev.everkeep.models.Note" />
+        <action
+            android:id="@+id/action_noteEditFragment_to_noteSettingsFragment"
+            app:destination="@id/noteSettingsFragment" />
+        <action
+            android:id="@+id/action_noteEditFragment_to_noteReminderFragment"
+            app:destination="@id/noteReminderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteScribbleFragment"
+        android:label=""
+        android:name="com.darkndev.everkeep.ui.note_scribble.NoteScribbleFragment"
+        tools:layout="@layout/fragment_note_scribble">
+        <argument
+            android:name="NOTE"
+            app:argType="com.darkndev.everkeep.models.Note" />
+    </fragment>
+    <dialog
+        android:id="@+id/noteStatusFragment"
+        android:name="com.darkndev.everkeep.ui.note_status.NoteStatusFragment"
+        android:label="fragment_note_status"
+        tools:layout="@layout/fragment_note_status">
+        <argument
+            android:name="NOTE"
+            app:argType="com.darkndev.everkeep.models.Note" />
+    </dialog>
+    <dialog
+        android:id="@+id/permissionDialog"
+        android:name="com.darkndev.everkeep.ui.permission_dialog.PermissionDialog"
+        android:label="PermissionDialog" >
+        <argument
+            android:name="REQUEST_TYPE"
+            app:argType="com.darkndev.everkeep.utils.user_preferences.RequestType"
+            android:defaultValue="SHOW_ABOUT" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_permissionDialog"
+        app:destination="@id/permissionDialog" />
+    <dialog
+        android:id="@+id/noteSettingsFragment"
+        android:name="com.darkndev.everkeep.ui.note_settings.NoteSettingsFragment"
+        android:label="NoteSettingsFragment"
+        tools:layout="@layout/fragment_note_settings">
+        <argument
+            android:name="NOTE"
+            app:argType="com.darkndev.everkeep.models.Note" />
+    </dialog>
+    <fragment
+        android:id="@+id/noteRecycleFragment"
+        android:name="com.darkndev.everkeep.ui.note_recycle.NoteRecycleFragment"
+        android:label="Recycle Bin"
+        tools:layout="@layout/fragment_archived" />
+    <dialog
+        android:id="@+id/confirmDialog"
+        android:name="com.darkndev.everkeep.ui.confirm_dialog.ConfirmDialog"
+        android:label="ConfirmDialog" >
+        <argument
+            android:name="REQUEST_CODE"
+            app:argType="integer" />
+        <argument
+            android:name="NOTE_IDS"
+            app:argType="long[]" />
+        <argument
+            android:name="TITLE"
+            app:argType="string" />
+        <argument
+            android:name="MESSAGE"
+            app:argType="string" />
+        <argument
+            android:name="POSITIVE"
+            app:argType="string" />
+        <argument
+            android:name="NEGATIVE"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_confirmDialog"
+        app:destination="@id/confirmDialog" />
+    <dialog
+        android:id="@+id/noteReminderFragment"
+        android:name="com.darkndev.everkeep.ui.note_reminder.NoteReminderFragment"
+        android:label="NoteReminderFragment"
+        tools:layout="@layout/fragment_note_reminder" >
+        <argument
+            android:name="NOTE"
+            app:argType="com.darkndev.everkeep.models.Note" />
+    </dialog>
+</navigation>
