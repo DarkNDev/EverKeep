@@ -42,4 +42,15 @@ https://github.com/DarkNDev/EverKeep/assets/49820671/05d9cab3-bb19-4015-a7c7-571
 
 
 ### Libraries Used
-Material 3, Navigation Component, Kotlin coroutines, Room Database, Jetpack Datastore, Lifecycle (ViewModel + LiveData), Dagger Hilt, Themed Toggle Button (By nl.bryanderidder), RecyclerView Selection, Glide, Flexbox and Splash Screen Api.
+1. Material 3
+2. Navigation Component
+3. Kotlin coroutines
+4. Room Database
+5. Jetpack Datastore
+6. Lifecycle (ViewModel + LiveData)
+7. Dagger Hilt
+8. Themed Toggle Button (By nl.bryanderidder)
+9. RecyclerView Selection
+10. Glide
+11. Flexbox
+12. Splash Screen Api
