@@ -90,8 +90,8 @@ class NoteScribbleViewModel @Inject constructor(
         }
         application.apply {
             contentResolver.insert(imageCollection, contentValues)?.also { uri ->
-                contentResolver.openOutputStream(uri).use {
-                    if (bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)) {
+                contentResolver.openOutputStream(uri).use { outputStream ->
+                    if (outputStream?.let { bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it) } == true) {
                         scribbleEventChannel.send(ScribbleEvent.ShowMessage("Scribble saved successfully"))
                     } else {
                         throw IOException("Couldn't save bitmap")
@@ -110,8 +110,8 @@ class NoteScribbleViewModel @Inject constructor(
             "com.darkndev.everkeep.provider",
             image
         )
-        application.contentResolver.openOutputStream(uri).use {
-            if (bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)) {
+        application.contentResolver.openOutputStream(uri).use { outputStream ->
+            if (outputStream?.let { bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it) } == true) {
                 scribbleEventChannel.send(ScribbleEvent.ShareScribble(uri))
             } else {
                 throw IOException("Couldn't save bitmap")
