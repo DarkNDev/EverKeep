@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Provider
 
-@Database(entities = [Note::class, Label::class], version = 1)
+@Database(entities = [Note::class, Label::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class EverKeepDatabase : RoomDatabase() {
 
